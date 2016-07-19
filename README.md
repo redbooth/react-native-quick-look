@@ -46,6 +46,10 @@ However, you can access the view encapsulated by the QuickLook Preview Controlle
 2. Run `npm install` from the Example folder
 3. Open `Example.xcodeproj` and run the app from Xcode
 
+### Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/aerofs/react-native-quick-look/master/screenshot.gif)
+
 ## License
 
 `react-native-quick-look` is available under the MIT license. See the LICENSE file for more info.
