@@ -12,42 +12,36 @@ import {
   View
 } from 'react-native';
 
+let QuickLook = require('react-native-quick-look');
+
 class Example extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          QuickLook Demo!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={{ flex: 1, backgroundColor: 'green', margin: 30 }}>
+          <QuickLook style={{ flex: 1 }} assetFileName={ 'Demo.pdf' } />
+        </View>
       </View>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'column',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    paddingTop: 40
+  }
 });
 
 AppRegistry.registerComponent('Example', () => Example);

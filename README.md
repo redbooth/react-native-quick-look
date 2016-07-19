@@ -31,11 +31,20 @@ However, you can access the view encapsulated by the QuickLook Preview Controlle
 // style it like any other View
 // url is the url of the file you want to preview
 <QuickLook style={{ flex: 1 }} url={ url } />
+// or 
+// provide the filename of the asset included with the app
+<QuickLook style={{ flex: 1 }} assetFileName={ 'demo.pdf' } />
 ```
 
 ### Android
 
 ​	Not available
+
+## Running the Example App
+
+1. Clone/download the repo
+2. Run `npm install` from the Example folder
+3. Open `Example.xcodeproj` and run the app from Xcode
 
 ## License
 
