@@ -1,0 +1,39 @@
+{
+  "name": "react-native-quick-look",
+  "version": "0.1.0",
+  "description": "React Native Component for iOS QuickLook Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "ios/ReactNativeQuickLook.xcodeproj",
+    "index.js",
+    "README.md",
+    "ios/ReactNativeQuickLook/RNQuickLookManager.h",
+    "ios/ReactNativeQuickLook/RNQuickLookManager.m",
+    "ios/ReactNativeQuickLook/RNQuickLookView.h",
+    "ios/ReactNativeQuickLook/RNQuickLookView.m"
+  ],
+  "devDependencies": {
+    "react-native": ">=0.25.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.25.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerofs/react-native-quick-look.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "quicklook"
+  ],
+  "author": "Rahul Jiresal <rahul@aerofs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aerofs/react-native-quick-look/issues"
+  },
+  "homepage": "https://github.com/aerofs/react-native-quick-look#readme"
+}
