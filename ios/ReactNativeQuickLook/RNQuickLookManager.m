@@ -15,7 +15,7 @@
 RCT_EXPORT_MODULE()
 
 - (UIView *) view  {
-  return [[RNQuickLookView alloc] init];
+    return [[RNQuickLookView alloc] init];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(url, NSString)

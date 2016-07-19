@@ -18,62 +18,62 @@
 @implementation RNQuickLookView
 
 - (instancetype)init {
-  self = [super init];
-  if (self) {
-    [self initialize];
-  }
-  return self;
-  
+    self = [super init];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+    
 }
 
 - (instancetype)initWithPreviewItemUrl:(NSString*)url {
-  NSAssert(url != nil, @"Preview Item URL cannot be nil");
-  self = [super init];
-  if (self) {
-    _url = url;
-    [self initialize];
-  }
-  return self;
+    NSAssert(url != nil, @"Preview Item URL cannot be nil");
+    self = [super init];
+    if (self) {
+        _url = url;
+        [self initialize];
+    }
+    return self;
 }
 
 - (void)initialize {
-  self.previewCtrl = [[QLPreviewController alloc] init];
-  self.previewCtrl.delegate = self;
-  self.previewCtrl.dataSource = self;
-  self.previewView = self.previewCtrl.view;
-  self.clipsToBounds = YES;
-  [self addSubview:self.previewCtrl.view];
+    self.previewCtrl = [[QLPreviewController alloc] init];
+    self.previewCtrl.delegate = self;
+    self.previewCtrl.dataSource = self;
+    self.previewView = self.previewCtrl.view;
+    self.clipsToBounds = YES;
+    [self addSubview:self.previewCtrl.view];
 }
 
 - (void)layoutSubviews {
-  [super layoutSubviews];
-  [self.previewView setFrame:self.frame];
+    [super layoutSubviews];
+    [self.previewView setFrame:self.frame];
 }
 
 - (void)setUrl:(NSString *)urlString {
-  _url = [urlString stringByRemovingPercentEncoding];
-  [self.previewCtrl refreshCurrentPreviewItem];
+    _url = [urlString stringByRemovingPercentEncoding];
+    [self.previewCtrl refreshCurrentPreviewItem];
 }
 
 - (void)setAssetFileName:(NSString*)filename {
-  _url = [[NSBundle mainBundle] pathForResource:[filename stringByDeletingPathExtension] ofType:[filename pathExtension]];
-  [self.previewCtrl refreshCurrentPreviewItem];
+    _url = [[NSBundle mainBundle] pathForResource:[filename stringByDeletingPathExtension] ofType:[filename pathExtension]];
+    [self.previewCtrl refreshCurrentPreviewItem];
 }
 
 #pragma mark - QLPreviewControllerDataSource
 
 - (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller {
-  return 1;
+    return 1;
 }
 
 - (id <QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index {
-  return [NSURL fileURLWithPath:_url];
+    return [NSURL URLWithString:_url];
 }
 
 #pragma mark - QLPreviewControllerDelegate
 
 - (BOOL)previewController:(QLPreviewController *)controller shouldOpenURL:(NSURL *)url forPreviewItem:(id <QLPreviewItem>)item {
-  return YES;
+    return YES;
 }
 
 @end

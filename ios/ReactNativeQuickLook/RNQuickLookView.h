@@ -8,8 +8,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RNQuickLookView : UIView {
-  NSString* _url;
-  NSString* _assetFileName;
+    NSString* _url;
+    NSString* _assetFileName;
 }
 
 - (instancetype)initWithPreviewItemUrl:(NSString*)url;
