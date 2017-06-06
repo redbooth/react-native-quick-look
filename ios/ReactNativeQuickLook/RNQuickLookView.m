@@ -67,7 +67,7 @@
 }
 
 - (id <QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index {
-    return [NSURL URLWithString:_url];
+    return [NSURL fileURLWithPath:_url];
 }
 
 #pragma mark - QLPreviewControllerDelegate
